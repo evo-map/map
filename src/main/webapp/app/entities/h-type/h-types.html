@@ -1,0 +1,60 @@
+<div>
+    <h2 data-translate="mapApp.hType.home.title">H Types</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="h-type.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="mapApp.hType.home.createLabel">
+                        Create new H Type
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="mapApp.hType.name">Name</span></th>
+                    <th><span data-translate="mapApp.hType.hDescriptor">H Descriptor</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="hType in vm.hTypes track by hType.id">
+                    <td><a ui-sref="h-type-detail({id:hType.id})">{{hType.id}}</a></td>
+                    <td>{{hType.name}}</td>
+                    <td>
+                        <a ui-sref="h-descriptor-detail({id:hType.hDescriptor.id})">{{hType.hDescriptor.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="h-type-detail({id:hType.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="h-type.edit({id:hType.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="h-type.delete({id:hType.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

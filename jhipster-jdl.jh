@@ -1,0 +1,59 @@
+
+entity HType {
+	name String
+}
+
+entity HRel {
+	relationshipSemantic RelationshipSemantic,
+    deletionSemantic DeletionSemantic,
+    maxToCardinality Long,
+    maxFromCardinality Long,
+    requiresToHolon Boolean,
+    requiresFromHolon Boolean
+}
+
+entity HDescriptor {
+	type HDescriptorType,
+    decscriptorBody String
+}
+
+entity HVisualizer {
+	name String
+}
+
+enum RelationshipSemantic {
+    AKO, APO, ASSOC
+}
+
+enum DeletionSemantic {
+    BLOCK, PROP
+}
+
+enum HDescriptorType {
+    JSON_SCHEMA, RDF_TURTLE
+}
+
+relationship OneToMany {
+	HType{fromOf} to HRel{fromHolon},
+    HType{toOf} to HRel{toHolon}
+}
+
+relationship OneToMany {
+	HDescriptor{descriptors} to HType
+}
+
+relationship OneToMany {
+	HType{visualizers} to HVisualizer
+}
+
+
+
+/**
+paginate JobHistory, Employee with infinite-scroll
+paginate Job with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl except Employee, Job
+angularSuffix * with mySuffix
+**/

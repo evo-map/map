@@ -1,0 +1,26 @@
+{
+    "mapApp": {
+        "hType" : {
+            "home": {
+                "title": "H Types",
+                "createLabel": "Create a new H Type",
+                "createOrEditLabel": "Create or edit a H Type",
+                "search": "Search for H Type"
+            },
+            "created": "A new H Type is created with identifier {{ param }}",
+            "updated": "A H Type is updated with identifier {{ param }}",
+            "deleted": "A H Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete H Type {{ id }}?"
+            },
+            "detail": {
+                "title": "H Type"
+            },
+            "name": "Name",
+            "fromOf": "From Of",
+            "toOf": "To Of",
+            "visualizers": "Visualizers",
+            "hDescriptor": "H Descriptor"
+        }
+    }
+}

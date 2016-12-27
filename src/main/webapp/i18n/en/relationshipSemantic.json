@@ -1,0 +1,10 @@
+{
+    "mapApp": {
+        "RelationshipSemantic" : {
+            "null": "",
+            "AKO": "AKO",
+            "APO": "APO",
+            "ASSOC": "ASSOC"
+        }
+    }
+}

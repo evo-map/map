@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "hType",
+            "otherEntityName": "hType",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161227171901",
+    "entityTableName": "h_visualizer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

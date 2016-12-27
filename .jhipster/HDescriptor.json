@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "descriptors",
+            "otherEntityName": "hType",
+            "otherEntityRelationshipName": "hDescriptor"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "HDescriptorType",
+            "fieldValues": "JSON_SCHEMA,RDF_TURTLE"
+        },
+        {
+            "fieldName": "decscriptorBody",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161227171900",
+    "entityTableName": "h_descriptor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

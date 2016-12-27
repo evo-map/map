@@ -1,0 +1,77 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHRelLabel" data-translate="mapApp.hRel.home.createOrEditLabel">Create or edit a H Rel</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.hRel.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.hRel.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hRel.relationshipSemantic" for="field_relationshipSemantic">Relationship Semantic</label>
+            <select class="form-control" name="relationshipSemantic" ng-model="vm.hRel.relationshipSemantic" id="field_relationshipSemantic">
+                <option value="AKO" data-translate="mapApp.RelationshipSemantic.AKO">AKO</option>
+                <option value="APO" data-translate="mapApp.RelationshipSemantic.APO">APO</option>
+                <option value="ASSOC" data-translate="mapApp.RelationshipSemantic.ASSOC">ASSOC</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hRel.deletionSemantic" for="field_deletionSemantic">Deletion Semantic</label>
+            <select class="form-control" name="deletionSemantic" ng-model="vm.hRel.deletionSemantic" id="field_deletionSemantic">
+                <option value="BLOCK" data-translate="mapApp.DeletionSemantic.BLOCK">BLOCK</option>
+                <option value="PROP" data-translate="mapApp.DeletionSemantic.PROP">PROP</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hRel.maxToCardinality" for="field_maxToCardinality">Max To Cardinality</label>
+            <input type="number" class="form-control" name="maxToCardinality" id="field_maxToCardinality"
+                    ng-model="vm.hRel.maxToCardinality"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hRel.maxFromCardinality" for="field_maxFromCardinality">Max From Cardinality</label>
+            <input type="number" class="form-control" name="maxFromCardinality" id="field_maxFromCardinality"
+                    ng-model="vm.hRel.maxFromCardinality"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hRel.requiresToHolon" for="field_requiresToHolon">Requires To Holon</label>
+            <input type="checkbox" class="form-control" name="requiresToHolon" id="field_requiresToHolon"
+                    ng-model="vm.hRel.requiresToHolon"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hRel.requiresFromHolon" for="field_requiresFromHolon">Requires From Holon</label>
+            <input type="checkbox" class="form-control" name="requiresFromHolon" id="field_requiresFromHolon"
+                    ng-model="vm.hRel.requiresFromHolon"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="mapApp.hRel.fromHolon" for="field_fromHolon">From Holon</label>
+            <select class="form-control" id="field_fromHolon" name="fromHolon" ng-model="vm.hRel.fromHolon" ng-options="hType as hType.id for hType in vm.htypes track by hType.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="mapApp.hRel.toHolon" for="field_toHolon">To Holon</label>
+            <select class="form-control" id="field_toHolon" name="toHolon" ng-model="vm.hRel.toHolon" ng-options="hType as hType.id for hType in vm.htypes track by hType.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

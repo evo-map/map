@@ -1,0 +1,24 @@
+{
+    "mapApp": {
+        "hDescriptor" : {
+            "home": {
+                "title": "H Descriptors",
+                "createLabel": "Create a new H Descriptor",
+                "createOrEditLabel": "Create or edit a H Descriptor",
+                "search": "Search for H Descriptor"
+            },
+            "created": "A new H Descriptor is created with identifier {{ param }}",
+            "updated": "A H Descriptor is updated with identifier {{ param }}",
+            "deleted": "A H Descriptor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete H Descriptor {{ id }}?"
+            },
+            "detail": {
+                "title": "H Descriptor"
+            },
+            "type": "Type",
+            "decscriptorBody": "Decscriptor Body",
+            "descriptors": "Descriptors"
+        }
+    }
+}
