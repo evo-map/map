@@ -1,0 +1,9 @@
+{
+    "mapApp": {
+        "HDescriptorType" : {
+            "null": "",
+            "JSON_SCHEMA": "JSON_SCHEMA",
+            "RDF_TURTLE": "RDF_TURTLE"
+        }
+    }
+}

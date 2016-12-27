@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="mapApp.hRel.detail.title">H Rel</span> {{vm.hRel.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="mapApp.hRel.relationshipSemantic">Relationship Semantic</span></dt>
+        <dd>
+            <span data-translate="{{'mapApp.RelationshipSemantic.' + vm.hRel.relationshipSemantic}}">{{vm.hRel.relationshipSemantic}}</span>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.deletionSemantic">Deletion Semantic</span></dt>
+        <dd>
+            <span data-translate="{{'mapApp.DeletionSemantic.' + vm.hRel.deletionSemantic}}">{{vm.hRel.deletionSemantic}}</span>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.maxToCardinality">Max To Cardinality</span></dt>
+        <dd>
+            <span>{{vm.hRel.maxToCardinality}}</span>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.maxFromCardinality">Max From Cardinality</span></dt>
+        <dd>
+            <span>{{vm.hRel.maxFromCardinality}}</span>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.requiresToHolon">Requires To Holon</span></dt>
+        <dd>
+            <span>{{vm.hRel.requiresToHolon}}</span>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.requiresFromHolon">Requires From Holon</span></dt>
+        <dd>
+            <span>{{vm.hRel.requiresFromHolon}}</span>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.fromHolon">From Holon</span></dt>
+        <dd>
+            <a ui-sref="h-type-detail({id:vm.hRel.fromHolon.id})">{{vm.hRel.fromHolon.id}}</a>
+        </dd>
+        <dt><span data-translate="mapApp.hRel.toHolon">To Holon</span></dt>
+        <dd>
+            <a ui-sref="h-type-detail({id:vm.hRel.toHolon.id})">{{vm.hRel.toHolon.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="h-rel-detail.edit({id:vm.hRel.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

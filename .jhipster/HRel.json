@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fromHolon",
+            "otherEntityName": "hType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "toHolon",
+            "otherEntityName": "hType",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "relationshipSemantic",
+            "fieldType": "RelationshipSemantic",
+            "fieldValues": "AKO,APO,ASSOC"
+        },
+        {
+            "fieldName": "deletionSemantic",
+            "fieldType": "DeletionSemantic",
+            "fieldValues": "BLOCK,PROP"
+        },
+        {
+            "fieldName": "maxToCardinality",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "maxFromCardinality",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "requiresToHolon",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "requiresFromHolon",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20161227171959",
+    "entityTableName": "h_rel",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

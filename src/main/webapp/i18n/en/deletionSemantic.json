@@ -1,0 +1,9 @@
+{
+    "mapApp": {
+        "DeletionSemantic" : {
+            "null": "",
+            "BLOCK": "BLOCK",
+            "PROP": "PROP"
+        }
+    }
+}

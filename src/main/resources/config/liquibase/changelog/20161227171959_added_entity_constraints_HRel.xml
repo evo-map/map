@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity HRel.
+    -->
+    <changeSet id="20161227171959-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="from_holon_id"
+                                 baseTableName="h_rel"
+                                 constraintName="fk_hrel_from_holon_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="h_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="to_holon_id"
+                                 baseTableName="h_rel"
+                                 constraintName="fk_hrel_to_holon_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="h_type"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+{
+    "mapApp": {
+        "hVisualizer" : {
+            "home": {
+                "title": "H Visualizers",
+                "createLabel": "Create a new H Visualizer",
+                "createOrEditLabel": "Create or edit a H Visualizer",
+                "search": "Search for H Visualizer"
+            },
+            "created": "A new H Visualizer is created with identifier {{ param }}",
+            "updated": "A H Visualizer is updated with identifier {{ param }}",
+            "deleted": "A H Visualizer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete H Visualizer {{ id }}?"
+            },
+            "detail": {
+                "title": "H Visualizer"
+            },
+            "name": "Name",
+            "hType": "H Type"
+        }
+    }
+}

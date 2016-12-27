@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "fromOf",
+            "otherEntityName": "hRel",
+            "otherEntityRelationshipName": "fromHolon"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "toOf",
+            "otherEntityName": "hRel",
+            "otherEntityRelationshipName": "toHolon"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "visualizers",
+            "otherEntityName": "hVisualizer",
+            "otherEntityRelationshipName": "hType"
+        },
+        {
+            "relationshipName": "hDescriptor",
+            "otherEntityName": "hDescriptor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161227171958",
+    "entityTableName": "h_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

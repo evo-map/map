@@ -1,0 +1,29 @@
+{
+    "mapApp": {
+        "hRel" : {
+            "home": {
+                "title": "H Rels",
+                "createLabel": "Create a new H Rel",
+                "createOrEditLabel": "Create or edit a H Rel",
+                "search": "Search for H Rel"
+            },
+            "created": "A new H Rel is created with identifier {{ param }}",
+            "updated": "A H Rel is updated with identifier {{ param }}",
+            "deleted": "A H Rel is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete H Rel {{ id }}?"
+            },
+            "detail": {
+                "title": "H Rel"
+            },
+            "relationshipSemantic": "Relationship Semantic",
+            "deletionSemantic": "Deletion Semantic",
+            "maxToCardinality": "Max To Cardinality",
+            "maxFromCardinality": "Max From Cardinality",
+            "requiresToHolon": "Requires To Holon",
+            "requiresFromHolon": "Requires From Holon",
+            "fromHolon": "From Holon",
+            "toHolon": "To Holon"
+        }
+    }
+}

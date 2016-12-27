@@ -1,0 +1,39 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHDescriptorLabel" data-translate="mapApp.hDescriptor.home.createOrEditLabel">Create or edit a H Descriptor</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.hDescriptor.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.hDescriptor.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hDescriptor.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.hDescriptor.type" id="field_type">
+                <option value="JSON_SCHEMA" data-translate="mapApp.HDescriptorType.JSON_SCHEMA">JSON_SCHEMA</option>
+                <option value="RDF_TURTLE" data-translate="mapApp.HDescriptorType.RDF_TURTLE">RDF_TURTLE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mapApp.hDescriptor.decscriptorBody" for="field_decscriptorBody">Decscriptor Body</label>
+            <input type="text" class="form-control" name="decscriptorBody" id="field_decscriptorBody"
+                    ng-model="vm.hDescriptor.decscriptorBody"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
